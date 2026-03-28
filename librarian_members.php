@@ -18,7 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
             $stmt = $pdo->prepare("UPDATE members SET status = ? WHERE member_id = ?");
             if ($stmt->execute([$new_status, $member_id])) {
-              <script>  $message = 'Member status updated!';</script>
+                $message = 'Member status updated!';
+              
             }
         }
     }
